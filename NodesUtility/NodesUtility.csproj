@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\NodeDescriber.cs" />
     <Compile Include="Interfaces\INodeDescriber.cs" />
     <Compile Include="Interfaces\INodeTransformer.cs" />
     <Compile Include="Modals\ManyChildrenNode.cs" />
