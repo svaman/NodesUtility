@@ -7,7 +7,12 @@ namespace NodesUtility.Business
     {
         public string Describe(Node node)
         {
-            throw new System.NotImplementedException();
+            var nodeName = node.Name;
+            var className = node.GetType().Name;
+            var output = "new " + className + "(\"" + nodeName + "\"" + ")";
+            return output;
         }
+
+
     }
 }
