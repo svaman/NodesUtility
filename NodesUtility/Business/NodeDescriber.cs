@@ -42,7 +42,22 @@ namespace NodesUtility.Business
                 output += "," + GetNodeDescription(parent.Child, nestingLevel + 1);
                 return output + ")";
             }
-            return "";
+            if (parent.GetType() == typeof(TwoChildrenNode))
+            {
+                output += "," + GetNodeDescription(parent.FirstChild, nestingLevel + 1);
+                output += "," + GetNodeDescription(parent.SecondChild, nestingLevel + 1);
+                return output + ")";
+            }
+
+            if (parent.GetType() == typeof(ManyChildrenNode))
+            {
+                foreach (var child in parent.Children)
+                {
+                    output += "," + GetNodeDescription(child, nestingLevel + 1);
+                    output += ")";
+                }
+            }
+            return output;
         }
 
     }
