@@ -6,6 +6,7 @@ namespace NodesUtility.Business
     public class NodeDescriber : INodeDescriber
     {
         private readonly string _indentation;
+
         public NodeDescriber(string indentation)
         {
             _indentation = indentation;
@@ -59,6 +60,5 @@ namespace NodesUtility.Business
             }
             return output;
         }
-
     }
 }
