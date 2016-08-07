@@ -5,6 +5,5 @@ namespace NodesUtility.Modals
         public NoChildrenNode(string name) : base(name)
         {
         }
-
     }
 }
