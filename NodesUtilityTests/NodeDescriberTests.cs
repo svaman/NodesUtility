@@ -17,7 +17,7 @@ namespace NodesUtilityTests
         }
 
         [Test]
-        public void Describe_InputNoChildrenNode_OutputsSameDescription()
+        public void Describe_Given_NoChildrenNode_Returns_NoChildrenNodeDescription()
         {
             //arrange
             var expected = "new NoChildrenNode(\"root\")";
@@ -29,7 +29,7 @@ namespace NodesUtilityTests
         }
 
         [Test]
-        public void Describe_InputSingleChildNode_OutputsSameDescription()
+        public void Describe_Given_SingleChildNode_Returns_SingleChildNodeDescription()
         {
             //arrange
             var expected = "new SingleChildNode(\"root\",\n" + Indentation + "new NoChildrenNode(\"leaf1\"))";
@@ -41,7 +41,7 @@ namespace NodesUtilityTests
         }
 
         [Test]
-        public void Test_Input_Root_With_TwoChildrenNode_Outputs_Same_Description()
+        public void Describe_Given_TwoChildrenNode_Returns_TwoChildrenNodeDescription()
         {
             //arrange
             var expected = "new TwoChildrenNode(\"root\",\n"
@@ -57,7 +57,7 @@ namespace NodesUtilityTests
         }
 
         [Test]
-        public void Test_Input_Root_With_Two_Children_Two_Leaf_Nodes_Outputs_Same_Description()
+        public void Describe_Given_ThreeLevelsOfNestedNodes_Returns_ThreeLevelsOfNestedNodesDescription()
         {
             //arrange
             var expected = "new SingleChildNode(\"root\",\n"
@@ -77,7 +77,7 @@ namespace NodesUtilityTests
         }
 
         [Test]
-        public void Test_Input_Root_With_ManyChildrenNode_Data_Outputs_Same_Description()
+        public void Describe_Given_ManyChildrenNode_Returns_ManyChildrenNodeDescription()
         {
             //arrange
             var expected = "new ManyChildrenNode(\"root\",\n"
