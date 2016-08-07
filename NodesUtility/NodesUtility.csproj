@@ -51,16 +51,17 @@
     <Compile Include="Infrastructure\NinjectFactory.cs" />
     <Compile Include="Interfaces\INodeDescriber.cs" />
     <Compile Include="Interfaces\INodeTransformer.cs" />
-    <Compile Include="Modals\ManyChildrenNode.cs" />
-    <Compile Include="Modals\NoChildrenNode.cs" />
-    <Compile Include="Modals\Node.cs" />
     <Compile Include="Interfaces\INodeWriter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Modals\SingleChildNode.cs" />
-    <Compile Include="Modals\TwoChildrenNode.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NodesUtilityModals\NodesUtilityModals.csproj">
+      <Project>{4A8E6F4F-6676-41A7-8BE5-C5EB7DF8A8C5}</Project>
+      <Name>NodesUtilityModals</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

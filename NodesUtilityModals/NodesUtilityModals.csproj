@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5092E133-75AF-42A2-B928-67C1760BE190}</ProjectGuid>
+    <ProjectGuid>{4A8E6F4F-6676-41A7-8BE5-C5EB7DF8A8C5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NodesUtilityTests</RootNamespace>
-    <AssemblyName>NodesUtilityTests</AssemblyName>
+    <RootNamespace>NodesUtilityModals</RootNamespace>
+    <AssemblyName>NodesUtilityModals</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,10 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework, Version=3.4.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\NUnit.3.4.1\lib\net45\nunit.framework.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,23 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NodeDescriberTests.cs" />
-    <Compile Include="NodeTransformerTests.cs" />
-    <Compile Include="NodeWriterTests.cs" />
+    <Compile Include="Modals\ManyChildrenNode.cs" />
+    <Compile Include="Modals\NoChildrenNode.cs" />
+    <Compile Include="Modals\Node.cs" />
+    <Compile Include="Modals\SingleChildNode.cs" />
+    <Compile Include="Modals\TwoChildrenNode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\NodesUtilityModals\NodesUtilityModals.csproj">
-      <Project>{4A8E6F4F-6676-41A7-8BE5-C5EB7DF8A8C5}</Project>
-      <Name>NodesUtilityModals</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\NodesUtility\NodesUtility.csproj">
-      <Project>{A781CA94-ABE6-4B93-A702-3B10E75D89E5}</Project>
-      <Name>NodesUtility</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

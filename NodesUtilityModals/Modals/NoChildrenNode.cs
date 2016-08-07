@@ -1,4 +1,4 @@
-namespace NodesUtility.Modals
+namespace NodesUtilityModals.Modals
 {
     public class NoChildrenNode : Node
     {

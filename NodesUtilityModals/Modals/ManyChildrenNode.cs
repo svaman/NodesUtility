@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace NodesUtility.Modals
+namespace NodesUtilityModals.Modals
 {
     public class ManyChildrenNode : Node
     {

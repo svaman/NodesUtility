@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NodesUtility", "NodesUtility\NodesUtility.csproj", "{A781CA94-ABE6-4B93-A702-3B10E75D89E5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NodesUtilityTests", "NodesUtilityTests\NodesUtilityTests.csproj", "{5092E133-75AF-42A2-B928-67C1760BE190}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NodesUtilityModals", "NodesUtilityModals\NodesUtilityModals.csproj", "{4A8E6F4F-6676-41A7-8BE5-C5EB7DF8A8C5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{5092E133-75AF-42A2-B928-67C1760BE190}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5092E133-75AF-42A2-B928-67C1760BE190}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5092E133-75AF-42A2-B928-67C1760BE190}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A8E6F4F-6676-41A7-8BE5-C5EB7DF8A8C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A8E6F4F-6676-41A7-8BE5-C5EB7DF8A8C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A8E6F4F-6676-41A7-8BE5-C5EB7DF8A8C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A8E6F4F-6676-41A7-8BE5-C5EB7DF8A8C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,5 +1,5 @@
 ﻿using NodesUtility.Business;
-using NodesUtility.Modals;
+using NodesUtilityModals.Modals;
 using NUnit.Framework;
 
 namespace NodesUtilityTests

@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using NodesUtility.Modals;
+using NodesUtilityModals.Modals;
 
 namespace NodesUtility.Interfaces
 {

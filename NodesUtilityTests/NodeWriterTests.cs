@@ -3,7 +3,7 @@ using System.Text;
 using System.Threading.Tasks;
 using NodesUtility.Infrastructure;
 using NodesUtility.Interfaces;
-using NodesUtility.Modals;
+using NodesUtilityModals.Modals;
 using NUnit.Framework;
 
 namespace NodesUtilityTests
