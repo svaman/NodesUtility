@@ -1,0 +1,9 @@
+Questions:
+
+
+1. Should the indentation be configurable? If yes how do you set it?
+Comments: I have injected it as a dependency so if it can be injected from a web config file if you want to implement the utility as a service.
+
+2. What is the purpose of having SingleChildNode & TwoChildrenNode? The firstChild, secondChild in TwoChildrenNode is not nice if the pattern goes on.
+
+3. Error logging and invalid input can be implemented depending on the requirement.
