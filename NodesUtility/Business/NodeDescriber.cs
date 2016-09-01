@@ -19,9 +19,8 @@ namespace NodesUtility.Business
 
         private string GetNodeDescription(Node node, int nestingLevel)
         {
-            dynamic parent = node;
-            var className = parent.GetType().Name;
-            var nodeName = parent.Name;
+            var className = node.GetType().Name;
+            var nodeName = node.Name;
             var output = string.Empty;
             if (nestingLevel > 0)
             {
@@ -33,26 +32,31 @@ namespace NodesUtility.Business
             }
             output += "new " + className + "(\"" + nodeName + "\"";
 
-            if (parent.GetType() == typeof(NoChildrenNode))
+            var noChildrenNode = node as NoChildrenNode;
+            if (noChildrenNode != null)
             {
                 return output + ")";
             }
 
-            if (parent.GetType() == typeof(SingleChildNode))
+            var singleChildNode = node as SingleChildNode;
+            if (singleChildNode != null)
             {
-                output += "," + GetNodeDescription(parent.Child, nestingLevel + 1);
-                return output + ")";
-            }
-            if (parent.GetType() == typeof(TwoChildrenNode))
-            {
-                output += "," + GetNodeDescription(parent.FirstChild, nestingLevel + 1);
-                output += "," + GetNodeDescription(parent.SecondChild, nestingLevel + 1);
+                output += "," + GetNodeDescription(singleChildNode.Child, nestingLevel + 1);
                 return output + ")";
             }
 
-            if (parent.GetType() == typeof(ManyChildrenNode))
+            var twoChildrenNode = node as TwoChildrenNode;
+            if (twoChildrenNode != null)
             {
-                foreach (var child in parent.Children)
+                output += "," + GetNodeDescription(twoChildrenNode.FirstChild, nestingLevel + 1);
+                output += "," + GetNodeDescription(twoChildrenNode.SecondChild, nestingLevel + 1);
+                return output + ")";
+            }
+
+            var manyChildrenNode = node as ManyChildrenNode;
+            if (manyChildrenNode != null)
+            {
+                foreach (var child in manyChildrenNode.Children)
                 {
                     output += "," + GetNodeDescription(child, nestingLevel + 1);
                     output += ")";
